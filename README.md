@@ -1,29 +1,29 @@
 # CodeAlpha - Secure Code Review
 
 ## 📌 Description
-Audit de sécurité d'une application Python de gestion de connexion utilisateur, réalisé dans le cadre du stage virtuel CodeAlpha en cybersécurité (Task 3).
+Security audit of a Python user authentication application, developed as part of the CodeAlpha Virtual Internship in Cybersecurity (Task 3).
 
-## 🛠 Technologies utilisées
+## 🛠 Technologies Used
 - Python 3
 - SQLite3
 - bcrypt
 
-## 📂 Contenu du dépôt
-- `app_a_auditer.py` — code original, contenant volontairement 5 vulnérabilités
-- `app_corrigee.py` — version corrigée, sécurisée
-- `RAPPORT_AUDIT.md` — rapport détaillé de l'audit (failles, gravité, recommandations)
+## 📂 Repository Contents
+- `app_a_auditer.py` — original code, intentionally containing 5 security vulnerabilities
+- `app_corrigee.py` — corrected, secured version
+- `RAPPORT_AUDIT.md` — detailed audit report (vulnerabilities found, severity, recommendations)
 
-## 🔍 Méthodologie
-Revue de code manuelle (analyse statique), recherche de vulnérabilités courantes selon les principes de l'OWASP.
+## 🔍 Methodology
+Manual code review (static analysis), searching for common vulnerabilities based on OWASP principles and secure coding best practices.
 
-## 🎓 Failles identifiées et corrigées
-1. Identifiants codés en dur → variables d'environnement
-2. Injection SQL → requêtes préparées
-3. Usage dangereux de `eval()` → `ast.literal_eval()`
-4. Absence de validation des entrées → gestion d'erreurs `try/except`
-5. Mots de passe en clair → hachage avec `bcrypt`
+## 🎓 Vulnerabilities Identified and Fixed
+1. Hardcoded credentials → environment variables
+2. SQL Injection → parameterized queries
+3. Dangerous use of `eval()` → `ast.literal_eval()`
+4. Missing input validation → `try/except` error handling
+5. Plaintext password storage → hashing with `bcrypt`
 
-Voir `RAPPORT_AUDIT.md` pour le détail complet.
+See `RAPPORT_AUDIT.md` for full details.
 
 ## ⚠️ Note
-Projet réalisé dans le cadre du stage virtuel CodeAlpha en cybersécurité.
+This project was completed as part of the CodeAlpha Virtual Cybersecurity Internship.
